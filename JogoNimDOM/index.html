@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Nim</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body onLoad=iniciarFosforos()>
+        <h1 id="inicio">Nim</h1>
+        <div id="menu-principal" class="container">
+            <div id="jogar" class="botoes" onClick=escolhaJogador()></div>
+            <div id="jogar-regras" class="botoes" onClick=verRegras()></div>
+            <div id="jogador1" class="botoes" onClick=iniciarJogo(1)></div>
+            <div id="jogador2" class="botoes" onClick=iniciarJogo(2)></div>
+            <p id="regras">
+                No nim, dois jogadores se revezam removendo fósforos enfileirados em formato de pirâmide da seguinte forma:
+                <br><br>
+                <img src="images/exemplo.png" alt="exemplo" id="exemplo">
+                <br><br>
+                Por sua vez, um jogador pode remover qualquer quantidade de fósforos, desde que todos estejam na mesma linha.
+                Você pode remover os fósforos clicando neles. Perde o jogador que for forçado a retirar o último fósforo.
+                Após pressionar jogar, escolha <strong>Um jogador</strong> para jogar contra o computador, ou escolha <strong>Dois jogadores</strong>
+                para se revezar jogando com um amigo.
+            </p>
+            
+            <div id="mensagem-vez"></div>
+            <hr id="mensagem-linha">                
+            
+            <div id="linhas">
+                <div id="linha1">
+                    <div id="fosforo1" class="fosforo" onMouseOver=fosforosPontuacao(1,1) 
+                        onMouseOut=fosforosSemPontuacao(1,1) onClick=fosforosClick(1,1)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>
+                </div>
+                <div id="linha2">
+                    <div id="fosforo2" class="fosforo" onMouseOver=fosforosPontuacao(2,2) 
+                        onMouseOut=fosforosSemPontuacao(2,2) onClick=fosforosClick(2,2)>
+                        <img src="images/fosforo.jpg" alt="fosforo">                   
+                    </div>                    
+                    
+                    <div id="fosforo3" class="fosforo" onMouseOver=fosforosPontuacao(2,3) 
+                        onMouseOut=fosforosSemPontuacao(2,3) onClick=fosforosClick(2,3)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>      
+                    <div id="fosforo4" class="fosforo" onMouseOver=fosforosPontuacao(2,4) 
+                        onMouseOut=fosforosSemPontuacao(2,4) onClick=fosforosClick(2,4)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                                 
+                </div>
+                <div id="linha3">
+                    <div id="fosforo5" class="fosforo" onMouseOver=fosforosPontuacao(5,5) 
+                        onMouseOut=fosforosSemPontuacao(5,5) onClick=fosforosClick(5,5)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                    
+                    <div id="fosforo6" class="fosforo" onMouseOver=fosforosPontuacao(5,6) 
+                        onMouseOut=fosforosSemPontuacao(5,6) onClick=fosforosClick(5,6)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>      
+                    <div id="fosforo7" class="fosforo" onMouseOver=fosforosPontuacao(5,7) 
+                        onMouseOut=fosforosSemPontuacao(5,7) onClick=fosforosClick(5,7)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div> 
+                    <div id="fosforo8" class="fosforo" onMouseOver=fosforosPontuacao(5,8) 
+                        onMouseOut=fosforosSemPontuacao(5,8) onClick=fosforosClick(5,8)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                    
+                    <div id="fosforo9" class="fosforo" onMouseOver=fosforosPontuacao(5,9)
+                        onMouseOut=fosforosSemPontuacao(5,9) onClick=fosforosClick(5,9)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>      
+                </div>
+                <div id="linha4">
+                    <div id="fosforo10" class="fosforo" onMouseOver=fosforosPontuacao(10,10)
+                        onMouseOut=fosforosSemPontuacao(10,10) onClick=fosforosClick(10,10)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                    
+                    <div id="fosforo11" class="fosforo" onMouseOver=fosforosPontuacao(10,11) 
+                        onMouseOut=fosforosSemPontuacao(10,11) onClick=fosforosClick(10,11)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>      
+                    <div id="fosforo12" class="fosforo" onMouseOver=fosforosPontuacao(10,12) 
+                        onMouseOut=fosforosSemPontuacao(10,12) onClick=fosforosClick(10,12)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div> 
+                    <div id="fosforo13" class="fosforo" onMouseOver=fosforosPontuacao(10,13)
+                        onMouseOut=fosforosSemPontuacao(10,13) onClick=fosforosClick(10,13)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                    
+                    <div id="fosforo14" class="fosforo" onMouseOver=fosforosPontuacao(10,14) 
+                        onMouseOut=fosforosSemPontuacao(10,14) onClick=fosforosClick(10,14)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>    
+                    <div id="fosforo15" class="fosforo" onMouseOver=fosforosPontuacao(10,15) 
+                        onMouseOut=fosforosSemPontuacao(10,15) onClick=fosforosClick(10,15)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                    
+                    <div id="fosforo16" class="fosforo" onMouseOver=fosforosPontuacao(10,16) 
+                        onMouseOut=fosforosSemPontuacao(10,16) onClick=fosforosClick(10,16)>
+                        <img src="images/fosforo.jpg" alt="fosforo">
+                    </div>                          
+                </div>
+                <div id="voltar" class="botoes" onClick=voltarAtras()></div>
+            </div>
+        </div>
+        <script>
+            const element = document.getElementById("inicio");
+            element.innerHTML = "Jogo do Nim";
+            document.getElementById("jogar").innerHTML = "Jogar!";
+            document.getElementById("jogar-regras").innerHTML = "Como Jogar?";
+            document.getElementById("jogador1").innerHTML = "Um Jogador";
+            document.getElementById("jogador2").innerHTML = "Dois Jogadores";
+            document.getElementById("voltar").innerHTML = "Voltar";
+        </script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
