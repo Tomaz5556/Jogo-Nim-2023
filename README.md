@@ -1,4 +1,4 @@
-# Jogo Nim
+# Jogo do Nim
 
 ### Sumário
 
@@ -36,7 +36,7 @@ Achei muito complexo a implementação.
 
 ### 4. Link do Jogo Online
 
-- [Jogo Nim](https://jogo-nim-2023-tomaz.netlify.app)
+- [Jogo do Nim](https://jogo-nim-2023-tomaz.netlify.app)
 
 <div id='regras'/> 
 
