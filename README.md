@@ -1,4 +1,4 @@
-# Jogo da Forca
+# Jogo Nim
 
 ### Sumário
 
